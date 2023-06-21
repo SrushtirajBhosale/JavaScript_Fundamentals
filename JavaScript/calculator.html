@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter your choice</h1>
+    <p>add</p>
+    <p>substract</p>
+    <p>multiply</p>
+    <p>divide</p>
+    <form>
+        <input type="text" id="choices" />
+        <button onclick="calculation(33, 11)">click</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function calculation(x, y){
+            const show = document.getElementById("choices").value;
+            // const result =document.getElementById("result");
+            // result.innerHTML = show;
+            // document.write(show);
+            
+            switch(show){
+                case "add": var a = x;
+                      var b = y;
+                      var sum = a+b;
+                      document.write(`The addition is ${sum}`);
+                      break;
+                case "substract": var a = x;
+                      var b = y;
+                      var sub = a-b;
+                      document.write(`The substraction is ${sub}`);
+                      break;
+                case "multiply": var a = x;
+                      var b = y;
+                      var mult = a*b;
+                      document.write(`The multiplication is ${mult}`);
+                      break;
+                case "divide": var a = x;
+                      var b = y;
+                      var mult = a/b;
+                      document.write(`The multiplication is ${mult}`);
+                      break;
+                default: ("input not fount")
+            }
+        }
+
+        
+    
+        // switch("multiply"){
+        //         case "add": var a = x;
+        //               var b = y;
+        //               var sum = a+b;
+        //               document.write(`The addition is ${sum}`);
+        //               break;
+        //         case "substract": var a = x;
+        //               var b = y;
+        //               var sub = a-b;
+        //               document.write(`The substraction is ${sub}`);
+        //               break;
+        //         case "multiply": var a = x;
+        //               var b = y;
+        //               var mult = a*b;
+        //               document.write(`The multiplication is ${mult}`);
+        //               break;
+        //         default: ("input not fount")
+        // }
+        
+    </script>
+
+</body>
+</html>

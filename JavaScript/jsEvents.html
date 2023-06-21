@@ -1,0 +1,46 @@
+<!-- 4 ways of writing events in JavaScript -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--   1️⃣First way -->
+    <button class="btn1" onclick='alert("this is the least used way for events[1]")'>click 1</button>
+    <button id="btn2" onclick="secondWay()">click 2</button>
+    <button id="btn3">click 3</button>
+    <button id="btn4">click 4</button>
+    <script>
+        // 2️⃣second way
+        function secondWay(){
+            alert('The most common way for handling events[2]');
+        }
+
+        // 3️⃣Third way
+        const thirdWay = document.getElementById('btn3');
+        thirdWay.onclick = () => {
+            alert('The third way for handling events[3]');
+            // console.log('The third way for handling events[3]');
+        }
+        thirdWay.onclick = () => {
+            console.log('The third way for handling events[3]');
+        }
+
+// The difference between 3 & 4 is 3rd overwrite response after calling the same event,but in the case of 4th way we can call same event multiple times with multiple results.
+
+        // 4️⃣Fourth way
+        const fourthWay = document.querySelector('#btn4');
+        fourthWay.addEventListener('click', ()=>{
+            alert('This way is now becoming popular for events handling');
+            // console.log('This way is now becoming popular for events handling');
+        })
+        fourthWay.addEventListener('click', ()=>{
+            // alert('This way is now becoming popular for events handling');
+            console.log('This way is now becoming popular for events handling');
+        })
+    </script>
+</body>
+</html>
